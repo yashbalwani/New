@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/images.webp);
+    background-size: cover;
+}
+
+body{
+    color: #fff;
+}
+
+ form{ 
+    width: 30%;
+    color: white;
+    height: 50vh;
+    padding-top: 40px;
+    align-items: center;
+    text-align: center;
+    margin-left: 35%;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(92, 182, 92, 0.2) ;
+    box-shadow: 0 0 60px red;
+    background: transparent;
+    border-radius: 5%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    background-position: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+form input{
+    width: 75%;
+    height: 50px;
+    outline: none;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 20px ;
+    border-radius: 40px;
+    background: none ;
+    color: black;
+    box-shadow: 0 0 20px red;
+}
+
+
+.text{
+    margin-top: 15%;
+    color: white;
+}
+
+
+
+.btn{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 30px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #ff004f;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ffa600;
+    transition: background , 0.50s;
+    display: inline-block;
+}
+
+
+.btn:hover{
+    background: #ff004f;
+}
+    
+    
+h1{
+    padding-bottom: 20px;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 700
+}
+
+::placeholder{
+    color: white;
+}
+
+
+@media only screen and (max-width: 600px){
+
+    h1{
+        padding-bottom: 20px;
+        font-size: 30px;
+        color: #fff;
+        font-weight: 600
+    }
+
+    form{ 
+        width: 70%;
+        color: white;
+        height: 55vh;
+        margin-top: 50%;
+        padding-top: 40px;
+        align-items: center;
+        text-align: center;
+        margin-left: 17%;
+        backdrop-filter: blur(20px);
+        border: 2px solid rgba(92, 182, 92, 0.2) ;
+        box-shadow: 0 0 60px red;
+        background: transparent;
+        border-radius: 5%;
+    }
+
+
+}
+
+@media only screen and (max-width: 500px){
+
+    
+
+
+    form{ 
+        width: 70%;
+        color: white;
+        height: 70vh;
+        margin-top: 50%;
+        padding-top: 40px;
+        align-items: center;
+        text-align: center;
+        margin-left: 17%;
+        backdrop-filter: blur(20px);
+        border: 2px solid rgba(92, 182, 92, 0.2) ;
+        box-shadow: 0 0 60px red;
+        background: transparent;
+        border-radius: 5%;
+    }
+}
