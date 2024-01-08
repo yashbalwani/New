@@ -15,18 +15,41 @@
         <div class="container">
             
             <div class="text"></div>
-            <form>
+            <form  name="submit-to-google-sheet">
                 <h1>Sign up And Earn Money</h1>
                 <input type="text" name="name" placeholder="Enter Your Name " required >
                 <input type="email" name="email"  placeholder="Enter Your E-mail" required >
                 <input type="text" name="number" placeholder="Enter Your Mobile Number" required >
                 <button type="submit" class="btn">Sign Up</button>
             </form>
+
+              <span id="msg"></span>
         </div>
 
     </div>
     </div>
 
 </body>
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwEMNnMdHJ_Cw7vGQ75-XjP2v5NIiq7zPeEwZW6U8mw0KHJ_eAhmYOLK-CP75dp0zIndw/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
 
 </html>
